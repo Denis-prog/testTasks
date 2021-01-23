@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+    <!-- task #1 start -->
+    <ul class="menu">
+        <li class="menu__item menu__item_active">
+            <a class="menu__link" href="#">Элемент меню</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="#">Элемент меню с наведением</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="#">Еще один элемент у которого очень длинный текст</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="#">Еще один элемент</a>
+        </li>
+        <li class="menu__item">
+            <a class="menu__link" href="#">Еще один элемент</a>
+        </li>
+    </ul>
+    <!-- task #1 end -->
+
+    <!--task2 start-->
+    <form action="#" method="POST" class="form">
+        <h2 class="form__title">Регистрация</h2>
+        <div class="form__fields-wrapper">
+            <label class="form__label" for="emailField">
+                E-mail
+            </label>
+            <input class="form__field" id="emailField" type="email" placeholder="example@site.domain" required />
+            <div class="form__password-wrapper">
+                <div class="form__password">
+                    <label class="form__label" for="passwordField">
+                        Пароль
+                    </label>
+                    <input class="form__field form__field-password" id="passwordField" type="password"
+                        placeholder="password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,12}" required />
+                    <!--от 12 до 16 знаков с обязательным наличием цифры заглавной и прописной буквы -->
+                    <div class="form__field-error">пароль от 12 до 16 знаков с обязательным наличием цифр, заглавных и
+                        прописных букв</div>
+                </div>
+                <div class="form__password">
+                    <label class="form__label" for="passwordRepeatField">
+                        Повторите пароль
+                    </label>
+                    <input class="form__field form__field-password" id="passwordRepeatField" type="password"
+                        placeholder="password" pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,12}" required />
+                    <div class="form__field-error">пароль от 12 до 16 знаков с обязательным наличием цифр, заглавных и
+                        прописных букв</div>
+                </div>
+            </div>
+            <label class="form__label" for="fullNameField" required>
+                ФИО
+            </label>
+            <input class="form__field" id="fullNameField" type="text" placeholder="Игорев Игорь Игоревич"
+                pattern="^\D{3,}$" required />
+                <!--только буквы, не короче 3 символов-->
+            <div class="form__field-error">поле должно содержать только буквы, не менее трех символов</div>
+            <label class="form__label" for="ageField">
+                Возраст
+            </label>
+            <input class="form__field" id="ageField" type="number" placeholder="18" min="0" max="100" required />
+        </div>
+        <div class="form__btns">
+            <button class="form__btns-item" type="submit">Отправить</button>
+            <button class="form__btns-item" type="reset">Отмена</button>
+        </div>
+    </form>
+    <!--task2 end-->
+
+    <!--task3 start-->
+    <div class="stepper">
+        <div class="stepper__item stepper__item_first">Шаг 1</div>
+        <div class="stepper__item stepper__item_second stepper__item_active">Шаг 2</div>
+        <div class="stepper__item stepper__item_last">Шаг 3</div>
+    </div>
+    <!--task3 end-->
+    <script src="script.js"></script>
+</body>
+
+</html>
