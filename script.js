@@ -26,6 +26,39 @@ function printTriangle(n) { //ширина основания
 
 printTriangle(5);
 
+/*второй метод*/ 
+
+function printTriangleSecond(n) {
+    let str = '';
+    let space = '';
+
+    for (let i = 0; i < n-1; i++) {
+        space += ' ';
+    }
+
+     (function iterator() {
+        str += space;
+        let i = 0;
+        for (i; i < n - space.length; i++) {
+            str += '# ';
+        }
+
+        str += "\n";
+        space = space.substring(0, space.length - 1);
+
+        if (i === n) {
+            return str;
+        }
+
+        iterator();
+    })();
+
+    return str; 
+}
+
+const str = printTriangleSecond(10);
+console.log(str);
+
 /* Требование к задаче:
 Создать массив;
 Заполнить массив рандомными целыми числами(например от - 100 до 100);
